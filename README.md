@@ -2,13 +2,18 @@
 
 Install and compile Ubuntu FFmpeg NDI-encoder machine.
 
-Install Ubuntu 16.04 Desktop with username NDI:
-git clone /xxxxxxx ffmpeg_runbook
+Install Ubuntu 16.04 Desktop with username NDI
+
+git clone https://github.com/tv2/Runbook_8ch_NDI_encoder.git ffmpeg_runbook
+
+cd ffmpeg_runbook
 
 edit the encodernames in encode8HDSDI.sh
 
-Run sripct:
+Run script:
+
 sudo chmod +X runbook.sh
+
 ./runbook.sh
 
 
