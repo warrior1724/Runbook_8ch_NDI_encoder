@@ -6,8 +6,9 @@
 InstallDir=.
 
 #Cleanup Ubuntu:
-sudo apt-get purge account-plugin-aim account-plugin-facebook account-plugin-flickr account-plugin-jabber account-plugin-salut account-plugin-yahoo aisleriot gnome-mahjongg gnome-mines gnome-sudoku unity-lens-photos unity-lens-video unity-scope-audacious unity-scope-chromiumbookmarks unity-scope-clementine unity-scope-colourlovers unity-scope-devhelp unity-scope-firefoxbookmarks unity-scope-gmusicbrowser unity-scope-gourmet unity-scope-musique unity-scope-openclipart unity-scope-texdoc unity-scope-tomboy unity-scope-video-remote unity-scope-zotero unity-webapps-common libreoffice*  thunderbird* rhythm*
-
+sudo apt-get -y purge account-plugin-aim account-plugin-facebook account-plugin-flickr account-plugin-jabber account-plugin-salut account-plugin-yahoo aisleriot gnome-mahjongg gnome-mines gnome-sudoku unity-lens-photos unity-lens-video unity-scope-audacious unity-scope-chromiumbookmarks unity-scope-clementine unity-scope-colourlovers unity-scope-devhelp unity-scope-firefoxbookmarks unity-scope-gmusicbrowser unity-scope-gourmet unity-scope-musique unity-scope-openclipart unity-scope-texdoc unity-scope-tomboy unity-scope-video-remote unity-scope-zotero unity-webapps-common libreoffice*  thunderbird* rhythm*
+sudo apt-get update
+sudo apt-get -y upgrade
 
 #Resize Ubuntu network system buffer: 
 #(to avoid h264 blur and other network related problems)
@@ -22,7 +23,7 @@ sudo sysctl -w net.ipv4.route.flush=1
 
 #Dependencies for FFmpeg:
 sudo apt-get update -qq
-sudo apt-get -y install autoconf automake build-essential cmake git libass-dev libfreetype6-dev libsdl2-dev libtheora-dev libtool libva-dev libvdpau-dev libvorbis-dev libxcb1-dev libxcb-shm0-dev libxcb-xfixes0-dev mercurial pkg-config  texinfo  wget  zlib1g-dev yasm libx264-dev libx265-dev libvpx-dev libfdk-aac-dev libmp3lame-dev libopus-dev libopencore-amrnb-dev libopencore-amrwb-dev librtmp-dev 
+sudo apt-get -y install autoconf automake build-essential cmake git libass-dev libfreetype6-dev libsdl2-dev libtheora-dev libtool libva-dev libvdpau-dev libvorbis-dev libxcb1-dev libxcb-shm0-dev libxcb-xfixes0-dev mercurial pkg-config texinfo wget zlib1g-dev yasm libx264-dev libx265-dev libvpx-dev libfdk-aac-dev libmp3lame-dev libopus-dev libopencore-amrnb-dev libopencore-amrwb-dev librtmp-dev 
 
 #NDI SDK:
 cd $InstallDir
@@ -37,10 +38,8 @@ cp -r "$InstallDir/NDI\ SDK\ for\ Linux/include" .
 cp -r "$InstallDir/NDI\ SDK\ for\ Linux/lib/x86_64-linux-gnu" ./lib
 cd $HOME
 
-#Copy NDI configfile: 
+#Copy and activate NDI configfile: 
 sudo cp $InstallDir/ndi.conf /etc/ld.so.conf.d/ndi.conf
-
-#Activate configuration:
 sudo ldconfig
 
 #Decklink SDK:
@@ -68,5 +67,8 @@ sudo chmod +X HDSDItoNDI.sh
 sudo chmod +X encode8HDSDI.sh
 sudo cp $InstallDir/encode8HDSDI.sh.desktop ~/.config/autostart/encode8HDSDI.sh.desktop
 
+#Install Decklink GUI:
+cd $InstallDir
+sudo apt-get -y install ./desktopvideo*
 
 
