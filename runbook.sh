@@ -3,7 +3,7 @@
 #This script will prepare - compile and install an 8-channel Decklink-NDI encoder
 
 #Environment:
-InstallDir=.
+InstallDir=$PWD
 
 #Cleanup Ubuntu:
 sudo apt-get -y purge account-plugin-aim account-plugin-facebook account-plugin-flickr account-plugin-jabber account-plugin-salut account-plugin-yahoo aisleriot gnome-mahjongg gnome-mines gnome-sudoku unity-lens-photos unity-lens-video unity-scope-audacious unity-scope-chromiumbookmarks unity-scope-clementine unity-scope-colourlovers unity-scope-devhelp unity-scope-firefoxbookmarks unity-scope-gmusicbrowser unity-scope-gourmet unity-scope-musique unity-scope-openclipart unity-scope-texdoc unity-scope-tomboy unity-scope-video-remote unity-scope-zotero unity-webapps-common libreoffice*  thunderbird* rhythm*
