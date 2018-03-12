@@ -2,8 +2,8 @@
 
 Install and compile Ubuntu FFmpeg NDI-encoder machine.
 -------------------------
-Install Ubuntu 16.04 Desktop with username NDI, networkname "Machinename in NDI network", and autoboot enabled
-Disable lockscreensaver
+Install Ubuntu 16.04 Desktop with username NDI (capital letters), networkname "Machinename in NDI network", and autoboot enabled
+Disable lockscreensaver.
 
 sudo apt-get install git
 
