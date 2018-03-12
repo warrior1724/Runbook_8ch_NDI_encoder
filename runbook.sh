@@ -26,25 +26,25 @@ sudo apt-get update -qq
 sudo apt-get -y install autoconf automake build-essential cmake git libass-dev libfreetype6-dev libsdl2-dev libtheora-dev libtool libva-dev libvdpau-dev libvorbis-dev libxcb1-dev libxcb-shm0-dev libxcb-xfixes0-dev mercurial pkg-config texinfo wget zlib1g-dev yasm libx264-dev libx265-dev libvpx-dev libfdk-aac-dev libmp3lame-dev libopus-dev libopencore-amrnb-dev libopencore-amrwb-dev librtmp-dev 
 
 #NDI SDK:
-cd $InstallDir
+cd $InstallDir/NDI-SDK
 sudo chmod +x InstallNDISDK_v3_Linux.sh
 sudo ./InstallNDISDK_v3_Linux.sh
 
-#Copy files from NDI SDK:
+#Move files from NDI SDK:
 mkdir ~/ffmpeg_sources
 mkdir ~/ffmpeg_sources/ndi
 cd ~/ffmpeg_sources/ndi
-cp -r "$InstallDir/NDI\ SDK\ for\ Linux/include" .
-cp -r "$InstallDir/NDI\ SDK\ for\ Linux/lib/x86_64-linux-gnu" ./lib
+mv -r "$InstallDir/NDI-SDK/NDI\ SDK\ for\ Linux/include" .
+mv -r "$InstallDir/NDI-SDK/NDI\ SDK\ for\ Linux/lib/x86_64-linux-gnu" ./lib
 cd $HOME
 
-#Copy and activate NDI configfile: 
-sudo cp $InstallDir/ndi.conf /etc/ld.so.conf.d/ndi.conf
+#Move and activate NDI configfile: 
+sudo mv $InstallDir/NDI-SDK/ndi.conf /etc/ld.so.conf.d/ndi.conf
 sudo ldconfig
 
 #Decklink SDK:
 mkdir $HOME/DecklinkSDK
-cp -R $InstallDir/Linux $HOME/DecklinkSDK
+mv -R $InstallDir/DecklinkSDK/Linux $HOME/DecklinkSDK
 
 #Get FFmpeg:
 cd $HOME
@@ -62,13 +62,19 @@ sudo ./configure  --prefix=$HOME/ffmpeg_build  --pkg-config-flags=--static  --ex
 make
 make install
 
+#Move Startupscripts to folder:
+mkdir $HOME/runffmpeg
+mv $InstallDir/StartupScripts/encode8HDSDI.sh $HOME/runffmpeg/encode8HDSDI.sh
+mv $InstallDir/StartupScripts/HDSDItoNDI.sh $HOME/runffmpeg/HDSDItoNDI.sh
+
+
 #Load Encoderscript at startup:
 sudo chmod +X HDSDItoNDI.sh
 sudo chmod +X encode8HDSDI.sh
-sudo cp $InstallDir/encode8HDSDI.sh.desktop ~/.config/autostart/encode8HDSDI.sh.desktop
+sudo mv $InstallDir/encode8HDSDI.sh.desktop ~/.config/autostart/encode8HDSDI.sh.desktop
 
 #Install Decklink GUI:
-cd $InstallDir
+cd $InstallDir/DecklinkGUI
 sudo apt-get -y install ./desktopvideo*
 
 

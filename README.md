@@ -1,8 +1,11 @@
 # Runbook_8ch_NDI_encoder
 
 Install and compile Ubuntu FFmpeg NDI-encoder machine.
+-------------------------
+Install Ubuntu 16.04 Desktop with username NDI, networkname "Machinename in NDI network", and autoboot enabled
+Disable lockscreensaver
 
-Install Ubuntu 16.04 Desktop with username NDI
+sudo apt-get install git
 
 git clone https://github.com/tv2/Runbook_8ch_NDI_encoder.git ffmpeg_runbook
 
@@ -25,6 +28,7 @@ Open desktopvideo (Decklink GUI) and setup card for 8 input.
 --------------------------------------------------
 
 FFmpeg examples:
+----------------------
 
 Direct RTSP URL:
 
