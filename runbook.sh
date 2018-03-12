@@ -76,11 +76,12 @@ mkdir $HOME/runffmpeg
 mv $InstallDir/StartUpScripts/encode8HDSDI.sh $HOME/runffmpeg/encode8HDSDI.sh
 mv $InstallDir/StartUpScripts/HDSDItoNDI.sh $HOME/runffmpeg/HDSDItoNDI.sh
 
-
 #Load Encoderscript at startup:
 echo "Set Encoderscript at startup"
+cd $HOME/runffmpeg
 sudo chmod +X HDSDItoNDI.sh
 sudo chmod +X encode8HDSDI.sh
+sudo mkdir ~/.config/autostart
 sudo mv $InstallDir/StartUpScripts/encode8HDSDI.sh.desktop ~/.config/autostart/encode8HDSDI.sh.desktop
 
 #Install Decklink GUI:
