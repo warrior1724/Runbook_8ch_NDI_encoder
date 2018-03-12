@@ -39,7 +39,7 @@ mv  "$InstallDir/NDI-SDK/NDI SDK for Linux/lib/x86_64-linux-gnu" ./lib
 cd $HOME
 
 #Move and activate NDI configfile: 
-sudo mv $InstallDir/NDI-SDK/ndi.conf /etc/ld.so.conf.d/ndi.conf
+sudo mv $InstallDir/NDI-SDK/NDI.conf /etc/ld.so.conf.d/NDI.conf
 sudo ldconfig
 
 #Decklink SDK:
