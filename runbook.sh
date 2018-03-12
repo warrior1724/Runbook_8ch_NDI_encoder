@@ -34,8 +34,8 @@ sudo ./InstallNDISDK_v3_Linux.sh
 mkdir ~/ffmpeg_sources
 mkdir ~/ffmpeg_sources/ndi
 cd ~/ffmpeg_sources/ndi
-mv -r "$InstallDir/NDI-SDK/NDI\ SDK\ for\ Linux/include" .
-mv -r "$InstallDir/NDI-SDK/NDI\ SDK\ for\ Linux/lib/x86_64-linux-gnu" ./lib
+mv  "$InstallDir/NDI-SDK/NDI\ SDK\ for\ Linux/include" .
+mv  "$InstallDir/NDI-SDK/NDI\ SDK\ for\ Linux/lib/x86_64-linux-gnu" ./lib
 cd $HOME
 
 #Move and activate NDI configfile: 
@@ -44,7 +44,7 @@ sudo ldconfig
 
 #Decklink SDK:
 mkdir $HOME/DecklinkSDK
-mv -R $InstallDir/DecklinkSDK/Linux $HOME/DecklinkSDK
+mv $InstallDir/DecklinkSDK/Linux $HOME/DecklinkSDK
 
 #Get FFmpeg:
 cd $HOME
