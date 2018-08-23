@@ -22,7 +22,9 @@ sudo chmod +X runbook.sh
 Open desktopvideo (Decklink GUI) and setup card for 8 input.
 
 
+sudo chmod +X /home/NDI/runffmpeg/encode8HDSDI.sh
 
+reboot machine
 
 
 --------------------------------------------------
