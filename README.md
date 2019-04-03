@@ -1,28 +1,54 @@
 # Runbook_8ch_NDI_encoder
 
-Install and compile Ubuntu FFmpeg NDI-encoder machine.
+## Install and compile Ubuntu FFmpeg NDI-encoder machine.
 -------------------------
-Install Ubuntu 16.04 Desktop with username NDI (capital letters), networkname "Machinename in NDI network", and autoboot enabled
+Install Ubuntu 18.04 Desktop with username NDI (capital letters), networkname should be the machinename you wish in the NDI network, and autoboot enabled
 Disable lockscreensaver.
 
+```
 sudo apt-get install git
-
 git clone https://github.com/tv2/Runbook_8ch_NDI_encoder.git ffmpeg_runbook
+````
 
 cd ffmpeg_runbook
-
 edit the encodernames in encode8HDSDI.sh
-
+```
+encode8HDSDI.sh
+```
+nano 
 Run script:
-
+cd ..
 sudo chmod +X runbook.sh
 
+```
 ./runbook.sh
+````
+
+### Install Decklink "Desktop Video"
+Download from here:
+```
+https://www.blackmagicdesign.com/support/family/capture-and-playback
+```
 
 Open desktopvideo (Decklink GUI) and setup card for 8 input.
 
-
+```
 sudo chmod +X /home/NDI/runffmpeg/encode8HDSDI.sh
+````
+
+### Enable SRT lib:
+Edit:
+```
+sudo nano /etc/ld.so.conf
+```
+Add line in file: 
+```
+include /usr/local/lib
+```
+Save and run:
+```
+sudo ldconfig
+```
 
 reboot machine
 
