@@ -6,8 +6,8 @@
 InstallDir=$PWD
 
 # Check if Username is correct (NDI in capital letters)
-if [ "$(whoami)" != "NDI" ]; then
-        echo "Script must be run as user: NDI"
+if [ "$(whoami)" != "ndi" ]; then
+        echo "Script must be run as user: ndi"
         exit -1
 fi
 

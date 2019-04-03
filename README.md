@@ -2,7 +2,7 @@
 
 ## Install and compile Ubuntu FFmpeg NDI-encoder machine.
 -------------------------
-Install Ubuntu 18.04 Desktop with username NDI (capital letters), networkname should be the machinename you wish in the NDI network, and autoboot enabled
+Install Ubuntu 18.04 Desktop with username: ndi(small letters), networkname should be the machinename you wish in the NDI network, and autoboot enabled
 Disable lockscreensaver.
 
 ```
@@ -33,7 +33,7 @@ https://www.blackmagicdesign.com/support/family/capture-and-playback
 Open desktopvideo (Decklink GUI) and setup card for 8 input.
 
 ```
-chmod +X /home/NDI/runffmpeg/encode8HDSDI.sh
+chmod +X /home/ndi/runffmpeg/encode8HDSDI.sh
 ````
 
 ### Enable SRT lib:
