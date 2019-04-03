@@ -5,6 +5,15 @@
 Install Ubuntu 18.04 Desktop with username: ndi(small letters), networkname should be the machinename you wish in the NDI network, and autoboot enabled
 Disable lockscreensaver.
 
+### Install Decklink "Desktop Video"
+Download from here:
+```
+https://www.blackmagicdesign.com/support/family/capture-and-playback
+```
+
+Open desktopvideo (Decklink GUI) and setup card for 8 input.
+
+### Install FFmpeg:
 ```
 sudo apt-get install git
 git clone https://github.com/tv2/Runbook_8ch_NDI_encoder.git ffmpeg_runbook
@@ -24,14 +33,7 @@ chmod +X runbook.sh
 ./runbook.sh
 ````
 
-### Install Decklink "Desktop Video"
-Download from here:
-```
-https://www.blackmagicdesign.com/support/family/capture-and-playback
-```
-
-Open desktopvideo (Decklink GUI) and setup card for 8 input.
-
+### Make encodersript runable:
 ```
 chmod +X /home/ndi/runffmpeg/encode8HDSDI.sh
 ````
