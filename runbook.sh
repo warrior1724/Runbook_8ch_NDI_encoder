@@ -65,6 +65,13 @@ cd srt
 make
 sudo make install
 
+#Decklink SDK:
+echo "Move Decklink SDK"
+
+mkdir $HOME/DecklinkSDK
+mv $InstallDir/DecklinkSDK/Linux $HOME/DecklinkSDK
+
+
 #Get FFmpeg:
 echo "Get FFmpeg"
 
