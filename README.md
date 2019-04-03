@@ -8,19 +8,19 @@ Disable lockscreensaver.
 ```
 sudo apt-get install git
 git clone https://github.com/tv2/Runbook_8ch_NDI_encoder.git ffmpeg_runbook
-````
+```
 
-cd ffmpeg_runbook
-edit the encodernames in encode8HDSDI.sh
 ```
-encode8HDSDI.sh
+cd ffmpeg_runbook/StartUpScripts
 ```
-nano 
+edit the encodernames in nano
+```
+nano encode8HDSDI.sh
+```
 Run script:
-cd ..
-sudo chmod +X runbook.sh
-
 ```
+cd ..
+chmod +X runbook.sh
 ./runbook.sh
 ````
 
@@ -33,7 +33,7 @@ https://www.blackmagicdesign.com/support/family/capture-and-playback
 Open desktopvideo (Decklink GUI) and setup card for 8 input.
 
 ```
-sudo chmod +X /home/NDI/runffmpeg/encode8HDSDI.sh
+chmod +X /home/NDI/runffmpeg/encode8HDSDI.sh
 ````
 
 ### Enable SRT lib:
