@@ -103,7 +103,7 @@ mv $InstallDir/StartUpScripts/HDSDItoNDI.sh $HOME/runffmpeg/HDSDItoNDI.sh
 echo "Set Encoderscript at startup"
 
 chmod +x $HOME/runffmpeg/HDSDItoNDI.sh
-chmod +x $HOME/runffmpegencode8HDSDI.sh
+chmod +x $HOME/runffmpeg/encode8HDSDI.sh
 mkdir ~/.config/autostart
 mv $InstallDir/StartUpScripts/encode8HDSDI.sh.desktop ~/.config/autostart/encode8HDSDI.sh.desktop
 
