@@ -16,6 +16,12 @@ Install:
 
 Open desktopvideo (Decklink GUI) and setup card for 8 input.
 
+### Install "Xterm"
+Ubuntu 18.04 doesn't by default install xterm. Install by
+```
+sudo apt update
+sudo apt install xterm
+```
 ### Install FFmpeg:
 ```
 sudo apt-get install git
