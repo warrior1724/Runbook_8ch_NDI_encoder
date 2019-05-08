@@ -10,6 +10,9 @@ Download from here:
 ```
 https://www.blackmagicdesign.com/support/family/capture-and-playback
 ```
+Install:
+* desktopvideo
+* desktopvideo-gui
 
 Open desktopvideo (Decklink GUI) and setup card for 8 input.
 
