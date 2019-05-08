@@ -71,12 +71,12 @@ echo "Move Decklink SDK"
 mkdir $HOME/DecklinkSDK
 mv $InstallDir/DecklinkSDK/Linux $HOME/DecklinkSDK
 
-
 #Get FFmpeg:
 echo "Get FFmpeg"
 
 cd $HOME
-git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
+#FFMPEG removed libndi - https://git.ffmpeg.org/gitweb/ffmpeg.git/commit/4b32f8b3ebfa011fcc5991bcaa97c3f5b61b49ad
+git clone https://github.com/FFmpeg/FFmpeg/releases/tag/n4.1.1 ffmpeg
 
 #Compile:
 echo "Compile FFmpeg"
