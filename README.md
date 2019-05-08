@@ -16,7 +16,6 @@ Install:
 
 Open desktopvideo (Decklink GUI) and setup card for 8 input.
 
-```
 ### Install FFmpeg:
 ```
 sudo apt-get install git
