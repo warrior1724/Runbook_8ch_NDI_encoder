@@ -21,9 +21,7 @@ Open desktopvideo (Decklink GUI) and setup card for 8 input.
 ```
 sudo apt-get install git
 git clone https://github.com/tv2/Runbook_8ch_NDI_encoder.git ffmpeg_runbook
-```
 
-```
 cd ffmpeg_runbook/StartUpScripts
 ```
 edit the encodernames in nano
