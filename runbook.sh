@@ -31,6 +31,9 @@ sudo sysctl -w net.ipv4.tcp_wmem='4096 65536 8388608'
 sudo sysctl -w net.ipv4.tcp_mem='8388608 8388608 8388608'
 sudo sysctl -w net.ipv4.route.flush=1
 
+# Dependencies for Ubuntu
+sudo apt install -y xterm
+
 # Dependencies for FFmpeg:
 echo "Dependencies for FFmpeg"
 sudo apt-get -y install autoconf automake build-essential cmake git libass-dev libfreetype6-dev libsdl2-dev libtheora-dev libtool libva-dev libvdpau-dev libvorbis-dev libxcb1-dev libxcb-shm0-dev libxcb-xfixes0-dev mercurial pkg-config texinfo wget zlib1g-dev yasm libx264-dev libx265-dev libvpx-dev libfdk-aac-dev libmp3lame-dev libopus-dev libopencore-amrnb-dev libopencore-amrwb-dev librtmp-dev 
